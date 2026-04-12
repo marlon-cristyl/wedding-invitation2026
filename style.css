@@ -1,4 +1,4 @@
-/* --- FONTS & VARIABLES --- */
+
 @font-face {
     font-family: 'High-End Magazine';
     src: url('fonts/high-end-magazine.woff2') format('woff2'),
@@ -34,7 +34,7 @@
     border: 2px solid #ffffff; /* Optional: makes them pop against the background */
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
-/* --- BASE STYLES --- */
+
 * { 
     box-sizing: border-box; 
     scroll-behavior: smooth; 
@@ -54,7 +54,7 @@ body {
     #status {
         font-size: 16px !important;
     }
-/* --- NAVIGATION & MENU --- */
+
 .menu-toggle {
     font-size: 30px;
     background-color: var(--soft-white);
@@ -141,7 +141,7 @@ nav a:hover {
     border-radius: 15px 0px 15px 0px; 
 }
 
-/* --- HERO SECTION --- */
+
 header {
     min-height: 80vh; 
     width: 100%;
@@ -191,7 +191,7 @@ header p {
     color: var(--soft-white);
 }
 
-/* --- COUNTDOWN --- */
+
 #countdown { 
     display: flex; 
     gap: 10px; 
@@ -224,7 +224,7 @@ header p {
     text-shadow: 1px 1px 3px rgba(0, 128, 128, 0.5); 
 }
 
-/* --- SECTIONS & CARDS --- */
+
 section { 
     padding: 30px 20px 10px; 
     margin: 0 auto; 
@@ -291,7 +291,7 @@ h2 {
     font-size: 1.5rem;
 }
 
-/* Replace the h4 selector with this class */
+
 .sub-heading-para {
     font-family: 'Great Vibes', cursive !important;
     font-weight: 800; 
@@ -301,7 +301,7 @@ h2 {
     text-transform: none; 
     letter-spacing: 1px;
     font-size: 2.0rem;
-    text-align: center; /* Matching your existing layout */
+    text-align: center;
 }
 
 .category-content {
@@ -315,7 +315,7 @@ h2 {
     text-align: center;
 }
 
-/* --- SLIDER & IMAGES --- */
+
 .slider-container {
     position: relative; 
     overflow: hidden; 
@@ -367,7 +367,7 @@ h2 {
     background: var(--turquoise); 
 }
 
-/* --- COMPONENTS & UTILS --- */
+
 .upload-container {
     margin: 30px auto;
     padding: 25px;
@@ -451,7 +451,7 @@ h2 {
     100% { transform: scale(1); }
 }
 
-/* --- FOOTER --- */
+
 footer p:first-child {
     font-family: 'Great Vibes', cursive !important;
     font-size: 3.5rem !important;
@@ -490,7 +490,7 @@ footer p:first-child {
     display: block;
 }
 
-/* --- OVERLAYS & MAPS --- */
+
 #invitationOverlay::before {
     content: "";
     position: absolute;
@@ -511,7 +511,7 @@ footer p:first-child {
     border: 1px solid #e0f2f2; 
 }
 
-/* --- ENTOURAGE SPECIFICS --- */
+
 #entourage .info-grid {
     justify-content: center; 
 }
@@ -533,15 +533,14 @@ footer p:first-child {
 html {
     -webkit-text-size-adjust: 100%;
 }
-/* --- MEDIA QUERIES --- */
+
 @media (max-width: 600px) { 
     section { 
-        padding: 40px 15px 20px; /* More top/bottom space, less side space */
-    } 
+        padding: 40px 15px 20px; 
     h2 { 
-        font-size: 2.8rem; /* Keeps the long "Wedding Details" text from wrapping awkwardly */
+        font-size: 2.8rem;
     } 
     .slider-container { 
-        height: 300px; /* Better aspect ratio for mobile screens */
+        height: 300px; 
     } 
 }
