@@ -1,4 +1,4 @@
-// --- NAVIGATION & MENU ---
+
 function toggleMenu() {
     const nav = document.getElementById("sideNav");
     const overlay = document.getElementById("overlay");
@@ -16,7 +16,7 @@ function toggleMenu() {
     }
 }
 
-// Close menu when a link is clicked
+
 document.querySelectorAll('nav a').forEach(link => {
     link.addEventListener('click', () => {
         const nav = document.getElementById("sideNav");
@@ -26,7 +26,7 @@ document.querySelectorAll('nav a').forEach(link => {
     });
 });
 
-// --- OPEN INVITATION & MUSIC ---
+
 const openBtn = document.getElementById("openBtn");
 const invitationOverlay = document.getElementById("invitationOverlay");
 const music = document.getElementById("weddingMusic");
@@ -66,7 +66,7 @@ if (musicBtn && music) {
     });
 }
 
-// --- COUNTDOWN ---
+
 const targetDate = new Date("May 13, 2026 09:00:00").getTime();
 function updateCountdown() {
     const now = new Date().getTime();
@@ -84,7 +84,7 @@ function updateCountdown() {
 setInterval(updateCountdown, 1000);
 updateCountdown();
 
-// --- SLIDER ---
+
 let idx = 0;
 function moveSlide(n) {
     const slides = document.querySelectorAll("#slider img");
@@ -93,8 +93,7 @@ function moveSlide(n) {
     slides[idx].classList.add("active");
 }
 
-// --- RSVP LOGIC ---
-// --- UPDATED RSVP LOGIC ---
+
 const rsvpForm = document.getElementById("rsvpForm");
 if (rsvpForm) {
     rsvpForm.onsubmit = function(e) {
@@ -110,7 +109,7 @@ if (rsvpForm) {
         btn.innerText = "⌛ Sending...";
         btn.disabled = true;
 
-        // Use URLSearchParams for better compatibility with Google Apps Script
+       
         const formData = new URLSearchParams();
         formData.append("GuestName", name);
         formData.append("Attendance", status);
@@ -118,12 +117,10 @@ if (rsvpForm) {
         fetch(scriptURL, { 
             method: "POST", 
             body: formData,
-            mode: "no-cors" // Adding no-cors can help with some Google Script redirections
+            mode: "no-cors" 
         })
         .then(() => {
-            // Since "no-cors" doesn't return the JSON body, we handle the UI update here
-            // To be safe for all mobile browsers, we show a generic success 
-            // unless you have a specific way to check capacity without CORS issues.
+           
             
             formContainer.innerHTML = `
                 <div style="padding: 20px; color: var(--deep-teal); font-weight: 600;">
